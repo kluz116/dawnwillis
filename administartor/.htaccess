@@ -1,0 +1,11 @@
+
+RewriteEngine On
+
+#RewriteBase /sps/
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^client/(.*)\.html$  client.php?name=$1&phone=$2 [NC,L]
+RewriteRule ^breakingnews/(.*)\.html$  breakingnews.php?id=$1&heading=$2 [NC,L]
